@@ -122,10 +122,8 @@ export default function Home() {
             className="news-input"
             placeholder="Enter your email"
           />
-          <button>
-            <Link href={"./Blog_four"}>
+          <button>    
               Read More <IoMdArrowDroprightCircle />
-            </Link>
           </button>
         </div>
       </section>
