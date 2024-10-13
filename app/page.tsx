@@ -1,100 +1,174 @@
-import Image from "next/image";
+// Link
+import Link from "next/link";
+
+// stylesheet
+import "./globals.css";
+
+import { IoMdArrowDroprightCircle } from "react-icons/io";
+import Header from "./Components/Header";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="home">
+      
+      <Header />
+      
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="hero-container puff-in-center">
+        <h2 className="focus-in-expand-fwd">Welcome to</h2>
+        <h1 className="bounce-top">
+          Digital <span> Dastak</span>
+        </h1>
+        <p>Your Gateway to the Programming World</p>
+      </section>
+
+      
+      <section className="third-container slide-in-left">
+        <div className="third-blog-cont1">
+          <div className="third-b-img"></div>
+          <div className="third-b-sp">10 October 2024</div>
+          <div className="third-b-head">
+            5 Essential Programming Languages for Beginners
+          </div>
+          <div className="third-b-para">
+            Starting your journey into the world of programming can feel
+            overwhelming. With so many languages to choose from,its difficult to
+            know where to begin.
+          </div>
+          <div className="third-b-button">
+            <button>
+            <Link href={"./Blog_one"} className="blog-links">
+                    Read More <IoMdArrowDroprightCircle className="blog-icon" />
+                  </Link>
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div className="third-blog-cont2">
+          <div className="inner-b-cont">
+            <div className="inner-image"></div>
+            <div className="inner-text">
+              <span className="inner-span">08 October 2024</span>
+              <div className="inner-head">
+                The Future of AI: What Programmers Need to
+              </div>
+              <div className="inner-para">
+                Explore the impact of artificial intelligence on programming
+              </div>
+              <div className="inner-button">
+                <button>
+                  <Link href={"./Blog_two"} className="blog-links">
+                    Read More <IoMdArrowDroprightCircle className="blog-icon" />
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="inner-b-cont">
+            <div className="inner-image2"></div>
+            <div className="inner-text">
+              <span className="inner-span">05 October 2024</span>
+              <div className="inner-head">
+                5 Must-Know Algorithms in Machine Learning
+              </div>
+              <div className="inner-para">
+                Uncover the most important machine learning algorithms
+              </div>
+              <div className="inner-button">
+                <button>
+                  <Link href={"./Blog_three"} className="blog-links">
+                    Read More <IoMdArrowDroprightCircle className="blog-icon" />
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="inner-b-cont">
+            <div className="inner-image4"></div>
+            <div className="inner-text">
+              <span className="inner-span">29 September 2024</span>
+              <div className="inner-head">
+                Creating Your First Web Application: A short Guide
+              </div>
+              <div className="inner-para">
+                A comprehensive guide to building your first web app, from idea
+                to deployment.
+              </div>
+              <div className="inner-button">
+                <button>
+                  <Link href={"./Blog_four"} className="blog-links" >
+                    Read More <IoMdArrowDroprightCircle className="blog-icon" />
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="newsletter">
+        <div className="news-text">
+          <h1>Subscribe to Our Newsletter:</h1>
+          <p>
+            Stay updated with the latest in programming and IT. Enter your email
+            below.
+          </p>
+        </div>
+        <div className="news-btn">
+          <input
+            type="text"
+            className="news-input"
+            placeholder="Enter your email"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          <button>
+            <Link href={"./Blog_four"}>
+              Read More <IoMdArrowDroprightCircle />
+            </Link>
+          </button>
+        </div>
+      </section>
+
+      <footer className="slide-in-bottom">
+        <div className="top-footer-cont">
+          <div className="columns">
+            <span className="Heading">Contact</span>
+            <span>digitaldastak@gmail.com</span>
+            <span>+201 40570 788</span>
+            <span>Address: example road, 123 street, Karachi.</span>
+          </div>
+
+          <div className="columns">
+            <span className="Heading">Digital Dastak</span>
+            <span>Our Story</span>
+            <span>Team</span>
+            <span>Careers</span>
+            <span>Blog</span>
+          </div>
+
+          <div className="columns">
+            <span className="Heading">Support</span>
+            <span>Help Center</span>
+            <span>FAQs</span>
+            <span>Privacy Policy</span>
+            <span>Terms of Services</span>
+          </div>
+
+          <div className="columns">
+            <span className="Heading">Follow Us</span>
+            <span>Facebook</span>
+            <span>Twitter</span>
+            <span>LinkedIn</span>
+            <span>Instagram</span>
+          </div>
+        </div>
+
+        <div className="line"></div>
+
+        <div className="bottom-footer-cont">
+          2024 Digital Dastak. All rights reserved.
+        </div>
       </footer>
     </div>
   );
